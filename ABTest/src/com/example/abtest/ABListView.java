@@ -8,7 +8,7 @@ import android.widget.Button;
 	public class ABListView extends Button implements IABView {
 
 		public ABListView(Context context) {
-			this(context, null);
+			this(context, null); 
 		}
 
 		public ABListView(Context context, AttributeSet attrs) {

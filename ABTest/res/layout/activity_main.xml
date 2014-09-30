@@ -10,7 +10,7 @@
         android:id="@+id/activity_layout_lvListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1" > 
     </com.example.abtest.ABListView>
 
     <LinearLayout

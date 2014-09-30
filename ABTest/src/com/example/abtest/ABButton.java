@@ -24,7 +24,7 @@ public class ABButton extends Button implements IABView {
 				attrs, R.styleable.ABButton, 0, 0);
 		try {
 			switch (attributes.getInt(R.styleable.ABButton_dirrection, 0)) {
-			default:
+			default: 
 			case 0:
 				setDirrection(Dirrection.LEFT_TO_RIGHT);
 				break;

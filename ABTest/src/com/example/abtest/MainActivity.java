@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
 	String[] strings = { "222", "233", "222", "233", "222", "233", "222",
 			"233", "222", "233", "222", "233", "222", "233", "222", "233" };
 
-	private ListView lvListView;
+	private ListView lvListView; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
