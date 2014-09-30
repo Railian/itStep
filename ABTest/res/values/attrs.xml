@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dirrection" format="enum">
+        <enum name="left_to_right" value="0" />
+        <enum name="right_to_left" value="1" />
+    </attr>
+
+    <declare-styleable name="ABButton">
+        <attr name="dirrection"></attr>
+    </declare-styleable>
+
+</resources>
