@@ -1,11 +1,13 @@
-package com.example.abtest;
+package com.example.abtest.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 
-	public class ABListView extends Button implements IABView {
+	public class ABListView extends ListView implements IABView {
 
 		public ABListView(Context context) {
 			this(context, null); 

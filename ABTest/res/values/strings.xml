@@ -4,8 +4,8 @@
     <string name="app_name">ABTest</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="activity_layout_btBack">Back</string>
-    <string name="activity_layout_btSupport">Support</string>
-    <string name="activity_layout_btPay">Pay</string>
+    <string name="activity_main_btBack">Back</string>
+    <string name="activity_main_btSupport">Support</string>
+    <string name="activity_main_btPay">Pay</string>
 
 </resources>

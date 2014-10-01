@@ -1,4 +1,4 @@
-package com.example.abtest;
+package com.example.abtest.views;
 
 public interface IABView {
 	
