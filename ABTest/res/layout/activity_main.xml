@@ -5,6 +5,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <TextView
+        android:id="@+id/activity_main_tvLeftCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_main_tvLeftCounter"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/activity_main_tvHandScore"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+        android:id="@+id/activity_main_tvRightCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_main_tvRightCounter"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
     <com.example.abtest.views.ABListView
         android:id="@+id/activity_main_lvListView"
         android:layout_width="match_parent"
@@ -20,15 +52,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/activity_main_btBack"
-            />
+            android:text="@string/activity_main_btBack" />
 
         <com.example.abtest.views.ABButton
-            android:id="@+id/activity_main_btSupport"
+            android:id="@+id/activity_main_btReset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/activity_main_btSupport" />
+            android:text="@string/activity_main_btReset" />
 
         <com.example.abtest.views.ABButton
             android:id="@+id/activity_main_btPay"

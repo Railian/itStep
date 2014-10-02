@@ -5,7 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="activity_main_btBack">Back</string>
-    <string name="activity_main_btSupport">Support</string>
+    <string name="activity_main_btReset">Reset</string>
     <string name="activity_main_btPay">Pay</string>
+    <string name="activity_main_tvHandScore">HAND SCORE</string>
+    <string name="activity_main_tvLeftCounter">0 (Left)</string>
+    <string name="activity_main_tvRightCounter">(Right) 0</string>
 
 </resources>
