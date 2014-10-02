@@ -7,7 +7,11 @@
     </attr>
 
     <declare-styleable name="ABButton">
-        <attr name="dirrection"></attr>
+        <attr name="dirrection" />
     </declare-styleable>
- 
+    
+    <declare-styleable name="ABListView">
+        <attr name="dirrection" />
+    </declare-styleable>
+
 </resources>

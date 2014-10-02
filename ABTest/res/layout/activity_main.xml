@@ -3,7 +3,7 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.example.abtest">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,6 +48,7 @@
         android:layout_height="wrap_content" >
 
         <com.example.abtest.views.ABButton
+            app:dirrection="right_to_left"
             android:id="@+id/activity_main_btBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -62,6 +63,7 @@
             android:text="@string/activity_main_btReset" />
 
         <com.example.abtest.views.ABButton
+            app:dirrection="left_to_right"
             android:id="@+id/activity_main_btPay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

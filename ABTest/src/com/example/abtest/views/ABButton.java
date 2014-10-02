@@ -2,14 +2,14 @@ package com.example.abtest.views;
 
 import com.example.abtest.R;
 import com.example.abtest.R.styleable;
-import com.example.abtest.views.IABView.Dirrection;
+import com.example.abtest.views.Directionable.Dirrection;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.Button;
 
-public class ABButton extends Button implements IABView {
+public class ABButton extends Button implements Directionable {
 
 	private Dirrection mDirrection;
 

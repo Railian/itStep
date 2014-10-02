@@ -1,7 +1,7 @@
 package com.example.abtest.views;
 
 import com.example.abtest.R;
-import com.example.abtest.views.IABView.Dirrection;
+import com.example.abtest.views.Directionable.Dirrection;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 
-	public class ABListView extends ListView implements IABView {
+	public class ABListView extends ListView implements Directionable {
 
 		private Dirrection mDirrection;
 
@@ -31,10 +31,9 @@ import android.widget.ListView;
 		}
 
 		private void customConstructor(Context context, AttributeSet attrs) {
-			TypedArray attributes = context.getTheme().obtainStyledAttributes(
-					attrs, R.styleable.ABButton, 0, 0);
+			TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ABListView, 0, 0);
 			try {
-				switch (attributes.getInt(R.styleable.ABButton_dirrection, 0)) {
+				switch (attributes.getInt(R.styleable.ABListView_dirrection, 0)) {
 				default:
 				case 0:
 					setDirrection(Dirrection.LEFT_TO_RIGHT);
@@ -50,7 +49,7 @@ import android.widget.ListView;
 
 		@Override
 		public Dirrection getDirrection() {
-			return null;
+			return mDirrection;
 		}
 
 		public void setDirrection(Dirrection mDirrection) {
