@@ -12,13 +12,13 @@ public class AccountManager {
 	public static enum Result {
 
 		// @formatter:off
-		INVALID_LOGIN			(R.string.account_manager_invalid_login), 
-		INVALID_PASSWORD		(R.string.account_manager_invalid_password), 
-		LOGIN_ALREADY_EXISTS	(R.string.account_manager_login_already_exists), 
-		LOGIN_IS_NOT_FOUND		(R.string.account_manager_login_is_not_found), 
-		WRONG_PASSWORD			(R.string.account_manager_wrong_password), 
-		SUCCESS					(R.string.account_manager_success), 
-		PASSWORD_IS_NOT_CONFIRM	(R.string.account_manager_password_is_not_confirm);
+		INVALID_LOGIN (R.string.account_manager_invalid_login), 
+		INVALID_PASSWORD (R.string.account_manager_invalid_password), 
+		LOGIN_ALREADY_EXISTS (R.string.account_manager_login_already_exists), 
+		LOGIN_IS_NOT_FOUND (R.string.account_manager_login_is_not_found), 
+		WRONG_PASSWORD (R.string.account_manager_wrong_password), 
+		SUCCESS (R.string.account_manager_success), 
+		PASSWORD_IS_NOT_CONFIRM (R.string.account_manager_password_is_not_confirm);
 		// @formatter:on
 
 		private int stringId;
