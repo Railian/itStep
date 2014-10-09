@@ -42,18 +42,18 @@ public class LaptopFragment extends Fragment implements OnTabChangeListener {
 		Laptop laptop = getArguments().getParcelable(ARGS_LAPTOP);
 
 		tvTitle.setText(laptop.getTitle());
-		tvPrice.setText(String.format("%d грн", laptop.getPrice()));
+		tvPrice.setText(String.format("%d РіСЂРЅ", laptop.getPrice()));
 
 		tabHost.setup();
 		TabHost.TabSpec tabSpec;
 
 		tabSpec = tabHost.newTabSpec("tag1");
-		tabSpec.setIndicator("Характеристики");
+		tabSpec.setIndicator("РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё");
 		tabSpec.setContent(new LaptopSpecificationsTab(getActivity(), laptop));
 		tabHost.addTab(tabSpec);
 		
 		tabSpec = tabHost.newTabSpec("tag2");
-		tabSpec.setIndicator("Описание");
+		tabSpec.setIndicator("РћРїРёСЃР°РЅРёРµ");
 		tabSpec.setContent(new LaptopDescriptionTab(getActivity(), laptop));
 		tabHost.addTab(tabSpec);
 
