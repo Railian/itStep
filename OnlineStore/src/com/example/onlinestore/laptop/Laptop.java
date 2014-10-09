@@ -158,6 +158,20 @@ public class Laptop implements Parcelable {
 		mHtmlDescription = source.readString();
 		mManufacturer = Manufacturer.values()[source.readInt()];
 		mScreenSize = ScreenSize.values()[source.readInt()];
+		mScreenResolution = ScreenResolution.values()[source.readInt()];
+		mScreenType = ScreenType.values()[source.readInt()];
+		mScreenCoating = ScreenCoating.values()[source.readInt()];
+		mTouchScreen = TouchScreen.values()[source.readInt()];
+		mCpu = Cpu.values()[source.readInt()];
+		mRam = Ram.values()[source.readInt()];
+		mVideoCard = VideoCard.values()[source.readInt()];
+		mVideoCardRam = VideoCardRam.values()[source.readInt()];
+		mTypeOfDrive = TypeOfDrive.values()[source.readInt()];
+		mCapacityOfDrive = CapacityOfDrive.values()[source.readInt()];
+		mOpticalDrive = OpticalDrive.values()[source.readInt()];
+		mOperationSystem = OperationSystem.values()[source.readInt()];
+		mWeight = Weight.values()[source.readInt()];
+		mColor = Color.values()[source.readInt()];
 	}
 
 	@Override
@@ -168,6 +182,20 @@ public class Laptop implements Parcelable {
 		dest.writeString(mHtmlDescription);
 		dest.writeInt(mManufacturer.ordinal());
 		dest.writeInt(mScreenSize.ordinal());
+		dest.writeInt(mScreenResolution.ordinal());
+		dest.writeInt(mScreenType.ordinal());
+		dest.writeInt(mScreenCoating.ordinal());
+		dest.writeInt(mTouchScreen.ordinal());
+		dest.writeInt(mCpu.ordinal());
+		dest.writeInt(mRam.ordinal());
+		dest.writeInt(mVideoCard.ordinal());
+		dest.writeInt(mVideoCardRam.ordinal());
+		dest.writeInt(mTypeOfDrive.ordinal());
+		dest.writeInt(mCapacityOfDrive.ordinal());
+		dest.writeInt(mOpticalDrive.ordinal());
+		dest.writeInt(mOperationSystem.ordinal());
+		dest.writeInt(mWeight.ordinal());
+		dest.writeInt(mColor.ordinal());
 	}
 
 	@Override

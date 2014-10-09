@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
+import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TextView;
 
 import com.example.onlinestore.R;
 import com.example.onlinestore.laptop.Laptop;
 
-public class LaptopFragment extends Fragment {
+public class LaptopFragment extends Fragment implements OnTabChangeListener {
 
 	public static final String TAG = LaptopFragment.class.getSimpleName();
 
@@ -36,27 +37,33 @@ public class LaptopFragment extends Fragment {
 				.findViewById(R.id.fragment_laptop_tvTitle);
 		TextView tvPrice = (TextView) rootView
 				.findViewById(R.id.fragment_laptop_tvPrice);
-		TextView tvManufacturer = (TextView) rootView
-				.findViewById(R.id.fragment_laptop_tvManufacturer);
-		TextView tvScreenSize = (TextView) rootView
-				.findViewById(R.id.fragment_laptop_tvScreenSize);
-		TextView tvScreenResolution = (TextView) rootView
-				.findViewById(R.id.fragment_laptop_tvScreenResolution);
-		WebView wvHtmlDescription = (WebView) rootView
-				.findViewById(R.id.fragment_laptop_wvHtmlDescription);
+		TabHost tabHost = (TabHost) rootView.findViewById(android.R.id.tabhost);
 
 		Laptop laptop = getArguments().getParcelable(ARGS_LAPTOP);
-		tvTitle.setText(laptop.getTitle());
-		tvPrice.setText(laptop.getPrice() + "");
-		tvManufacturer
-				.setText(laptop.getManufacturer().toString(getActivity()));
-		tvScreenSize.setText(laptop.getScreenSize().toString(getActivity()));
-		tvScreenResolution.setText(laptop.getScreenResolution().toString(
-				getActivity()));
-		wvHtmlDescription.loadDataWithBaseURL(null,
-				laptop.getHtmlDescription(), "text/html", "utf-8", null);
 
+		tvTitle.setText(laptop.getTitle());
+		tvPrice.setText(String.format("%d грн", laptop.getPrice()));
+
+		tabHost.setup();
+		TabHost.TabSpec tabSpec;
+
+		tabSpec = tabHost.newTabSpec("tag1");
+		tabSpec.setIndicator("Характеристики");
+		tabSpec.setContent(new LaptopSpecificationsTab(getActivity(), laptop));
+		tabHost.addTab(tabSpec);
+		
+		tabSpec = tabHost.newTabSpec("tag2");
+		tabSpec.setIndicator("Описание");
+		tabSpec.setContent(new LaptopDescriptionTab(getActivity(), laptop));
+		tabHost.addTab(tabSpec);
+
+		tabHost.setOnTabChangedListener(this);
 		return rootView;
+	}
+
+	@Override
+	public void onTabChanged(String tabId) {
+		
 	}
 
 }
