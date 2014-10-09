@@ -23,7 +23,7 @@ public class WelcomeActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_welcome);
+		setContentView(R.layout.container);
 		if (savedInstanceState == null) {
 			showSplashFragment();
 			mTimer.start();
@@ -43,7 +43,7 @@ public class WelcomeActivity extends Activity {
 	private void showSplashFragment() {
 		getFragmentManager()
 				.beginTransaction()
-				.add(R.id.activity_welcome_container, new SplashFragment(),
+				.add(R.id.container, new SplashFragment(),
 						SplashFragment.TAG).commit();
 	}
 
@@ -51,7 +51,7 @@ public class WelcomeActivity extends Activity {
 		getFragmentManager()
 				.beginTransaction()
 				.setCustomAnimations(R.animator.fade_in, R.animator.fade_out)
-				.replace(R.id.activity_welcome_container,
+				.replace(R.id.container,
 						new AuthorizationFragment(), AuthorizationFragment.TAG)
 				.commit();
 	}

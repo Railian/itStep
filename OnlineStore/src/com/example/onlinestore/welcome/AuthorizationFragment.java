@@ -2,6 +2,7 @@ package com.example.onlinestore.welcome;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.example.onlinestore.R;
+import com.example.onlinestore.main.StoreActivity;
 import com.example.onlinestore.welcome.AccountManager.Result;
 
 public class AuthorizationFragment extends Fragment implements OnClickListener {
@@ -179,5 +181,6 @@ public class AuthorizationFragment extends Fragment implements OnClickListener {
 		Toast.makeText(getActivity(), "Starting main Activity",
 				Toast.LENGTH_SHORT).show();
 		// TODO enter to onlineStore
+		startActivity(new Intent(getActivity(), StoreActivity.class));
 	}
 }
