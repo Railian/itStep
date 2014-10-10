@@ -44,7 +44,7 @@ public class BuyActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Intent intent = new Intent();
-		intent.putExtra(EXTRA_TXN_ID, 132614);
+		intent.putExtra(EXTRA_TXN_ID, "txn:132614");
 		setResult(Activity.RESULT_OK, intent);
 		finish();
 	}
