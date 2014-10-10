@@ -1,0 +1,5 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_good_tvTitle"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="wrap_content" />
