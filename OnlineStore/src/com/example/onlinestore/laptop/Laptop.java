@@ -129,7 +129,7 @@ public class Laptop implements Parcelable {
 
 	private String mTitle;
 	private int mPrice;
-	private int mImageId;
+	private String mImagesAssetPath;
 	private String mHtmlDescription;
 	private Manufacturer mManufacturer;
 	private ScreenSize mScreenSize;
@@ -154,7 +154,7 @@ public class Laptop implements Parcelable {
 	public Laptop(Parcel source) {
 		mTitle = source.readString();
 		mPrice = source.readInt();
-		mImageId = source.readInt();
+		mImagesAssetPath = source.readString();
 		mHtmlDescription = source.readString();
 		mManufacturer = Manufacturer.values()[source.readInt()];
 		mScreenSize = ScreenSize.values()[source.readInt()];
@@ -178,7 +178,7 @@ public class Laptop implements Parcelable {
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeString(mTitle);
 		dest.writeInt(mPrice);
-		dest.writeInt(mImageId);
+		dest.writeString(mImagesAssetPath);
 		dest.writeString(mHtmlDescription);
 		dest.writeInt(mManufacturer.ordinal());
 		dest.writeInt(mScreenSize.ordinal());
@@ -232,12 +232,12 @@ public class Laptop implements Parcelable {
 		mPrice = price;
 	}
 
-	public int getImageId() {
-		return mImageId;
+	public String getImagesAssetPath() {
+		return mImagesAssetPath;
 	}
 
-	public void setImageId(int mImageId) {
-		this.mImageId = mImageId;
+	public void setImagesAssetPath(String imagesAssetPath) {
+		mImagesAssetPath = imagesAssetPath;
 	}
 
 	public String getHtmlDescription() {
@@ -383,8 +383,8 @@ public class Laptop implements Parcelable {
 			builder.append("Title: ").append(mTitle).append('\n');
 		if (mPrice > 0)
 			builder.append("Price: ").append(mPrice).append('\n');
-		if (mImageId > 0)
-			builder.append("imageId: ").append(mImageId).append('\n');
+		if (mImagesAssetPath != null)
+			builder.append("mImagesAssetPath: ").append(mImagesAssetPath).append('\n');
 		if (mManufacturer != null)
 			builder.append("Manufacturer: ").append(mManufacturer).append('\n');
 		if (mScreenSize != null)

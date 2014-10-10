@@ -12,6 +12,7 @@
         android:padding="16dp" >
 
         <ImageView
+            android:id="@+id/fragment_laptop_ivIcon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="24dp"

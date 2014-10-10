@@ -71,7 +71,6 @@ public class LaptopSpecificationsTab implements TabContentFactory {
 				: mLaptop.getScreenCoating().toString());
 		tvTouchScreen.setText(mLaptop.getTouchScreen() == null ? "---"
 				: mLaptop.getTouchScreen().toString());
-
 		tvCpu.setText(mLaptop.getCpu() == null ? "---"
 				: mLaptop.getCpu().toString());
 		tvRam.setText(mLaptop.getRam() == null ? "---"

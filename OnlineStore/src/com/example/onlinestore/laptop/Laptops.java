@@ -44,6 +44,10 @@ public class Laptops extends ArrayList<Laptop> {
 								laptop.setPrice(Integer.parseInt(xmlPullParser
 										.getAttributeValue(i)));
 								break;
+							case "ImagesAssetPath":
+								laptop.setImagesAssetPath(xmlPullParser
+										.getAttributeValue(i));
+								break;
 							case "HtmlDescription":
 								laptop.setHtmlDescription(xmlPullParser
 										.getAttributeValue(i));
