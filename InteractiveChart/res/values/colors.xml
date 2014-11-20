@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_lighter">#78C6D3</color>
+    <color name="blue">#46A2BF</color>
+    <color name="blue_darker">#388299</color>
+    <color name="blue_shadow">#275B6B</color>
+    <color name="grey_darker">#BAB5B3</color>
+    <color name="grey">#756C67</color>
+    <color name="grey_lighter">#DDDAD9</color>
+    <color name="green_lighter">#8CC600</color>
+    <color name="green">#22b573</color>
+    <color name="green_darker">#8CC600</color>
+    <color name="green_text">#39b500</color>
+    <color name="red">#F15A24</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue_facebook">#3B5998</color>
+    <color name="blue_facebook_darker">#293e6a</color>
+    <color name="blue_facebook_swadow">#1d2b4a</color>
+    <color name="blue_twitter">#2aa9e0</color>
+    <color name="blue_twitter_darker">#1d769c</color>
+    <color name="blue_twitter_swadow">#14526d</color>
+    <color name="red_youtube">#cd332d</color>
+    <color name="red_youtube_darker">#8f241f</color>
+    <color name="red_youtube_swadow">#641916</color>
+ <color name="tutorial_circle_fill">#78c6d3</color>
+    
+</resources>
