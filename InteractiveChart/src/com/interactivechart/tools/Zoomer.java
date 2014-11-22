@@ -7,11 +7,9 @@ import com.interactivechart.tools.Axis.AxisType;
 public class Zoomer {
 
 	private Timeline mTimeline;
-	private View mView;
 
-	public Zoomer(Timeline timeline, View view) {
+	public Zoomer(Timeline timeline) {
 		mTimeline = timeline;
-		mView = view;
 	}
 
 	public void zoomImmediately(float zoomFactor) {
@@ -33,10 +31,8 @@ public class Zoomer {
 		else
 			mTimeline.setTimeRange(now - (range + 2 * delta), now);
 
-		mTimeline.setAxisType(AxisType.determinate(
-				mTimeline.getRightTimestamp(), mTimeline.getLeftTimestamp()));
-
-		mView.invalidate();
+//		mTimeline.setAxisType(AxisType.determinate(
+//				mTimeline.getRightTimestamp(), mTimeline.getLeftTimestamp()));
 	}
 
 	public void softZoom(float zoomFactor) {

@@ -1,16 +1,12 @@
 package com.interactivechart.tools;
 
-import android.view.View;
-
 public class Scroller {
 
 	private Timeline mTimeline;
-	private View mView;
 	private boolean mCurrentTimeWall;
 
-	public Scroller(Timeline timeline, View view) {
+	public Scroller(Timeline timeline) {
 		mTimeline = timeline;
-		mView = view;
 		mCurrentTimeWall = true;
 	}
 
@@ -32,12 +28,18 @@ public class Scroller {
 			mTimeline.setTimeRange(leftTime + timestamp, rightTime + timestamp);
 		else
 			mTimeline.setTimeRange(now - timeRange, now);
-
-		mView.invalidate();
 	}
 
 	public void scrollImmediately(float scrollFactor) {
 		scrollImmediately((long) (mTimeline.getTimeRange() * scrollFactor));
+	}
+
+	public void scrollToLeftTimestamp(long timestamp) {
+		mTimeline.setTimeRange(timestamp, timestamp - mTimeline.getTimeRange());
+	}
+
+	public void scrollToRightTimestamp(long timestamp) {
+		mTimeline.setTimeRange(timestamp - mTimeline.getTimeRange(), timestamp);
 	}
 
 }

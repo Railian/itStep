@@ -1,7 +1,5 @@
 package com.interactivechart.tools;
 
-import com.interactivechart.tools.Axis.AxisType;
-
 public interface Timeline {
 
 	public static final int SECOND_IN_MILLISECONDS = 1000;
@@ -15,14 +13,10 @@ public interface Timeline {
 
 	public long getTimeRange();
 
-	public AxisType getAxisType();
-
 	public void setLeftTimestamp(long timestamp);
 
 	public void setRightTimestamp(long timestamp);
 
 	public void setTimeRange(long leftTimestamp, long rightTimestamp);
-
-	public void setAxisType(AxisType determinate);
 
 }
