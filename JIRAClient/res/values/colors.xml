@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="blue_light">#57aee1</color>
+    <color name="blue_light_tansparant">#3357aee1</color>
+    <color name="blue_light_background">#daeffa</color>
+    <color name="blue">#003366</color>
+    <color name="orange">#f26122</color>
+    
+</resources>
